@@ -75,8 +75,8 @@ psql -U <your_username> -d <your_database>
 \i q3.sql
 ```
 
-## Analytical Queries
+## Analytical Queries, To be implemented ... 
 
-- **`q1.sql`:** [Add your Q1 English question and SQL highlight, e.g., outer join]
-- **`q2.sql`:** [Add your Q2 English question and SQL highlight, e.g., `GROUP BY` / `HAVING`]
-- **`q3.sql`:** [Add your Q3 English question and SQL highlight, e.g., subquery]
+- **`q1.sql`:** []
+- **`q2.sql`:** []
+- **`q3.sql`:** []
