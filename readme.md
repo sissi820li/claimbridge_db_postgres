@@ -75,8 +75,8 @@ psql -U <your_username> -d <your_database>
 \i q3.sql
 ```
 
-## Analytical Queries, To be implemented ... 
+## Analytical Queries
 
-- **`q1.sql`:** []
-- **`q2.sql`:** []
-- **`q3.sql`:** []
+- **`q1.sql`:** All claims, sorted by most flags, then highest amount
+- **`q2.sql`:** Members with ≥2 claims and >$350 total
+- **`q3.sql`:** Claims strictly above their discipline's peer average, grouped by discipline A to Z
