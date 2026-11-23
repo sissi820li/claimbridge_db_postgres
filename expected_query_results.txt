@@ -1,0 +1,82 @@
+Query 1 Output: 40 rows, all claims, sorted by most flags then highest amount
+
+claim_id |   member_name   |    carrier_name     | amount_claimed | flag_count | review_status 
+----------+-----------------+---------------------+----------------+------------+---------------
+       36 | Samuel Mensah   | Desjardins          |         490.00 |          3 | Pending
+        6 | Sofia Rossi     | Canada Life         |         420.00 |          3 | Denied
+       40 | Caleb Wright    | Manulife            |         520.00 |          2 | Pending
+       10 | Amara Okafor    | Sun Life            |         450.00 |          2 | Denied
+       34 | Grace Liu       | Green Shield Canada |         410.00 |          2 | Pending
+       32 | Mateo Alvarez   | Canada Life         |         380.00 |          2 | Denied
+        4 | Liam Chen       | Manulife            |         360.00 |          2 | Denied
+       30 | Olivia Kowalski | Ontario Blue Cross  |         350.00 |          2 | Pending
+       14 | Chloe Gagnon    | Desjardins          |         340.00 |          2 | Denied
+       24 | Owen MacLeod    | Manulife            |         320.00 |          2 | Denied
+       18 | Hannah Nguyen   | Sun Life            |         315.00 |          2 | Pending
+        8 | Noah Tremblay   | Canada Life         |         310.00 |          2 | Pending
+        2 | Maya Patel      | Manulife            |         290.00 |          2 | Approved
+       20 | Daniel Brooks   | Green Shield Canada |         285.00 |          2 | Pending
+       38 | Ava Deschamps   | Desjardins          |         360.00 |          1 | Pending
+       26 | Zara Haddad     | Desjardins          |         275.00 |          1 | Pending
+       12 | Ethan Kim       | Ontario Blue Cross  |         265.00 |          1 | Approved
+       16 | Lucas Silva     | Desjardins          |         250.00 |          1 | Pending
+       22 | Priya Sharma    | Green Shield Canada |         240.00 |          1 | Approved
+       28 | Benjamin Park   | Sun Life            |         230.00 |          1 | Pending
+       31 | Mateo Alvarez   | Canada Life         |         190.00 |          1 | Approved
+        1 | Maya Patel      | Sun Life            |         135.00 |          1 | Approved
+       11 | Ethan Kim       | Ontario Blue Cross  |         110.00 |          1 | Approved
+       21 | Priya Sharma    | Green Shield Canada |          90.00 |          1 | Approved
+       35 | Samuel Mensah   | Ontario Blue Cross  |         200.00 |          0 | Approved
+       37 | Ava Deschamps   | Desjardins          |         195.00 |          0 | Approved
+       33 | Grace Liu       | Green Shield Canada |         185.00 |          0 | Approved
+       39 | Caleb Wright    | Manulife            |         180.00 |          0 | Pending
+        7 | Noah Tremblay   | Canada Life         |         150.00 |          0 | Approved
+        3 | Liam Chen       | Manulife            |         145.00 |          0 | Approved
+
+Query 2: 18 rows, members with ≥2 claims and >$350 total
+
+member_id |   member_name   | claim_count | total_claimed | avg_claim_amount 
+-----------+-----------------+-------------+---------------+------------------
+        20 | Caleb Wright    |           2 |        700.00 |           350.00
+        18 | Samuel Mensah   |           2 |        690.00 |           345.00
+        17 | Grace Liu       |           2 |        595.00 |           297.50
+         5 | Amara Okafor    |           2 |        580.00 |           290.00
+        16 | Mateo Alvarez   |           2 |        570.00 |           285.00
+        19 | Ava Deschamps   |           2 |        555.00 |           277.50
+         3 | Sofia Rossi     |           2 |        545.00 |           272.50
+         2 | Liam Chen       |           2 |        505.00 |           252.50
+         4 | Noah Tremblay   |           2 |        460.00 |           230.00
+         7 | Chloe Gagnon    |           2 |        455.00 |           227.50
+        15 | Olivia Kowalski |           2 |        445.00 |           222.50
+         9 | Hannah Nguyen   |           2 |        435.00 |           217.50
+         1 | Maya Patel      |           2 |        425.00 |           212.50
+        12 | Owen MacLeod    |           2 |        415.00 |           207.50
+        10 | Daniel Brooks   |           2 |        385.00 |           192.50
+         6 | Ethan Kim       |           2 |        375.00 |           187.50
+        13 | Zara Haddad     |           2 |        360.00 |           180.00
+         8 | Lucas Silva     |           2 |        355.00 |           177.50
+
+Query 3: 20 rows, claims strictly above their discipline's peer average, grouped by discipline A to Z
+
+claim_id |   member_name   |  practitioner_name   |   discipline    | amount_claimed 
+----------+-----------------+----------------------+-----------------+----------------
+       30 | Olivia Kowalski | Dr. Tariq Mansour    | Chiropractic    |         350.00
+       24 | Owen MacLeod    | Dr. Tariq Mansour    | Chiropractic    |         320.00
+       26 | Zara Haddad     | Dr. Kenji Sato       | Chiropractic    |         275.00
+       22 | Priya Sharma    | Dr. Rachel Goldstein | Chiropractic    |         240.00
+       28 | Benjamin Park   | Dr. Rachel Goldstein | Chiropractic    |         230.00
+       14 | Chloe Gagnon    | Sarah Jenkins        | Massage Therapy |         340.00
+       18 | Hannah Nguyen   | David Tran           | Massage Therapy |         315.00
+       20 | Daniel Brooks   | Sarah Jenkins        | Massage Therapy |         285.00
+       12 | Ethan Kim       | David Tran           | Massage Therapy |         265.00
+       16 | Lucas Silva     | Claire Bouchard      | Massage Therapy |         250.00
+       10 | Amara Okafor    | Marcus Reid          | Physiotherapy   |         450.00
+        6 | Sofia Rossi     | Dr. Nadia Kapoor     | Physiotherapy   |         420.00
+        4 | Liam Chen       | Marcus Reid          | Physiotherapy   |         360.00
+        8 | Noah Tremblay   | Elena Novak          | Physiotherapy   |         310.00
+        2 | Maya Patel      | Dr. Nadia Kapoor     | Physiotherapy   |         290.00
+       40 | Caleb Wright    | Dr. Evelyn Cho       | Psychology      |         520.00
+       36 | Samuel Mensah   | Dr. Fatima Al-Sayed  | Psychology      |         490.00
+       34 | Grace Liu       | Dr. Fatima Al-Sayed  | Psychology      |         410.00
+       32 | Mateo Alvarez   | Dr. Patrick O'Connor | Psychology      |         380.00
+       38 | Ava Deschamps   | Dr. Patrick O'Connor | Psychology      |         360.00
